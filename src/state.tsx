@@ -290,7 +290,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   const actions = useMemo(() => createActions(dispatch, state), [dispatch, state]);
 
-  return <AppContext.Provider value={{ state, dispatch, actions }}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ state, dispatch, actions }}>
+      {children}
+    </AppContext.Provider>
+  );
 }
 
 export function useAppState() {
