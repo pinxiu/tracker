@@ -102,7 +102,7 @@ function WeekCard({ week, onSave, products }: { week: WeekPlan; onSave: (w: Week
       <GoalEditor label="AI focus" value={draft.aiFocus} onChange={(val) => setDraft({ ...draft, aiFocus: val })} />
       <GoalEditor label="Eng focus" value={draft.engFocus} onChange={(val) => setDraft({ ...draft, engFocus: val })} />
       <GoalEditor label="Media goal" value={draft.mediaGoal} onChange={(val) => setDraft({ ...draft, mediaGoal: val })} />
-      <label>Metrics moved (comma separated key=before->after)</label>
+      <label>Metrics moved (comma separated key=before→after)</label>
       <textarea
         value={draft.metricsMoved
           .map((m) => `${m.metricName}:${m.before ?? ''}->${m.after ?? ''}${m.note ? ` (${m.note})` : ''}`)
